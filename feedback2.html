@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added viewport meta tag -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="image/favicon_io/favicon.ico" type="image/X-icon">
+    <title>Feedback Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: lightcyan;
+            margin: 0; /* Added to remove default body margin */
+            padding: 0; /* Added to remove default body padding */
+        }
+        * {
+            box-sizing: border-box; /* Added to include padding and border in element's total width and height */
+        }
+        nav ul {
+            display: flex;
+            align-items: center;
+            background-color: rgba(38, 38, 153, 0.734);
+            list-style-type: none;
+            height: 65px;
+            margin: 0; /* Added to remove default margin */
+            padding: 0; /* Added to remove default padding */
+        }
+        .logo img {
+            width: 100px;
+            height: 50px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+            font-size: 1.3rem;
+        }
+        nav ul li {
+            padding: 0px 13px;
+        }
+        #h {
+            margin: 12px;
+            padding: 2px 4px 1pc;
+        }
+        #fee {
+            background-color: antiquewhite;
+            margin: 0 auto; /* Centering the form horizontally */
+            padding: 2% 4%; /* Adjusted padding for responsiveness */
+            font-size: 1.5rem;
+            max-width: 800px; /* Added maximum width for better responsiveness */
+            border-radius: 10px; /* Added border radius for better visual appearance */
+        }
+        #icon {
+            padding:2px 4px 2pt;
+            margin: 4px 680px ;
+        }
+        #title {
+            color: white;
+            margin-left: 10%;
+        }
+        textarea {
+            width: 100%; /* Make text area full width */
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            width: 45%; /* Adjusted width for submit and reset buttons */
+            margin: 5px; /* Added margin for spacing */
+            padding: 10px; /* Added padding for better click area */
+            cursor: pointer; /* Added cursor style */
+            border: none; /* Removed default button border */
+        }
+        @media only screen and (max-width: 768px) {
+            /* Adjust styles for smaller devices */
+            #fee {
+                padding: 5% 10%; /* Adjusted padding for smaller devices */
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li class="logo"><img src="image/favicon_io/android-chrome-192x192.png" alt="logo"><span id="title">RapidChat</span></li>
+        </ul>
+    </nav>
+    <br>
+</header>
+<main>
+    <div id="fee">
+        <div id="icon">
+            <a href="users.php"><img src="image/xicon.jpg" alt="icon" width="40"></a>
+        </div>
+        <h2 id="h">Feedback/ Report Form</h2>
+        <form action="feedback.php" method="post">
+            <b>Name:</b><input type="text" placeholder="Enter your name" name="fname" required><br><br>
+            <b>Email:</b><input type="email" placeholder="enter your email id" name="email" required><br><br>
+            <b>Subject:</b><input type="text" placeholder="Enter your subject" name="subject" required><br><br>
+            <b>Enter your opinions/Problems:</b><br><br>
+            <textarea name="idea" id="p" placeholder="Write anything your opinions or problems." required></textarea><br>
+            <input class="btn btn-success" type="submit" value="Send" name="post">
+            <input class="btn btn-danger" type="reset" value="Clear">
+        </form>
+    </div>
+</main>
+</body>
+</html>

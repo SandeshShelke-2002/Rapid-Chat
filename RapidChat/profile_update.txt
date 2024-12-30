@@ -1,0 +1,26 @@
+<!-- <?php 
+  session_start();
+  error_reporting(0);
+  include_once("/php/config.php");
+//   if(!isset($_SESSION['unique_id'])){
+//     header("location: login.php");
+//   }
+
+  if(isset($_POST['change'])){
+    if(empty($_POST['fname']) ||empty($_POST['mname']) || empty($_POST['lname'])|| empty($_POST['city']) ||
+      empty($_POST['email']) || empty($_POST['no']) || empty($_POST['bio'])){
+      $mql = "update users set fname='$_POST[fname]', mname='$_POST[mname]', lname='$_POST[lname]', city='$_POST[city]', email='$_POST[email]', no='$_POST[no]', bio='$_POST[bio]'  where unique_id='$_GET[user_id]' ";
+      
+      if(!mysqli_query($conn,$mql))
+      {
+        echo "<script type='text/javascript'>alert('Error! your profile isn't update.'); window.location='profile.php'</script>";
+      }
+       else
+       {
+      echo "<script type='text/javascript'>alert('Your profile is updated.'); window.location='profile.php'</script>";
+       }
+    }
+  }
+
+
+?> -->

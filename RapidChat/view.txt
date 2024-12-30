@@ -1,0 +1,32 @@
+.image_on{
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  background-color:black;
+  margin:auto;
+  z-index: 10;
+  top: 50px;
+  left: 50px;
+}
+
+.image_off{
+  display:none;
+}
+
+
+
+function close_image(e){
+    e.target.className="image_off";
+}
+
+function image_show(e){
+  var image=e.target.src;
+  var image_viewer=_("image_viewer");
+
+  image_viewer.innerHTML="<img src='"+image+"' style='width:100%'>";
+  image_viewer.className="image_on";
+}
+
+<div id="image_viewer" class="image_off" onclick="close_image(event)"></div>
+
+onclick="image_show(event)"

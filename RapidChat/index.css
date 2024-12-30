@@ -1,0 +1,26 @@
+#nav{
+  margin: 0;
+  padding: 0;
+  background-color:rgba(38, 38, 153, 0.734) !important;
+}
+
+body{
+  background-color: lightcyan !important;
+}
+
+.btn:hover{
+       height: 20px;
+       width: 90px;
+}
+
+.nav-link{
+  margin-left: 60px;
+  font-size: 120% !important;
+  color: white !important;
+}
+.nav-link:hover{
+  background-color: lightcyan;
+  font-size: 140% !important;
+  border-radius: 40%;
+  color: rgba(19, 19, 215, 0.776)  !important;
+}
